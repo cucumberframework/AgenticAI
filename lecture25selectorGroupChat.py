@@ -24,6 +24,5 @@ async def main():
 
     terminationcondition=MaxMessageTermination(max_messages=10) | TextMentionTermination("TERMINATE")
     teamchat= SelectorGroupChat([agent1,agent2,agent3],termination_condition=terminationcondition,model_client=model_client)
-    await Console(teamchat.run_stream(task="Analyze the https://www.naukri.com login page and create the test plan and test scripts for the same "))
-
+    await Console(teamchat.run_stream(task="Analyze the https://www.naukri.com login page and create the test plan and Generator agent should create the playwright javascript test scripts for the same"))
 asyncio.run(main())
